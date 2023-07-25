@@ -24,14 +24,14 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'usage-information',
+    name: 'usageInfo',
     message: 'What is the usage information?',
   },
   {
     type: 'list',
-    name: 'usage',
+    name: 'license',
     message: 'What is the license?',
-    choices: ['MIT License', 'Apache License 2.0', 'GNU General Public License V3.0', 'Mozilla Public License v2.0', 'The Unlicense'],
+    choices: ['MIT', 'BSD', 'Apache', 'Unlicensed'],
   },
   {
     type: 'input',
@@ -58,7 +58,7 @@ const questions = [
 // TODO: Create a function to write README file
 // creates readme.md file when user answers questions and logs error or success message
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName,generateReadMe(data),error=> {
+  fs.writeFile(fileName,generateMarkdown(data),error=> {
     if(error) {
       return console.log('error');
     } else{
