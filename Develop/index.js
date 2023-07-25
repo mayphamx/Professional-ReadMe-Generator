@@ -28,6 +28,7 @@ const questions = [
     message: 'What is the usage information?',
   },
   {
+    // multiple choice response 
     type: 'list',
     name: 'license',
     message: 'What is the license?',
@@ -68,7 +69,7 @@ function writeToFile(fileName, data) {
 };
 
 // TODO: Create a function to initialize app
-// 
+// prompts questions in integrated terminal, saves answers to input in readme
 function init() {
   inquirer.prompt(questions)
   .then(function(answers){
@@ -77,5 +78,5 @@ function init() {
   });
 };
 
-// Function call to initialize app
+// call function
 init();

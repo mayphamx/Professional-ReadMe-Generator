@@ -3,7 +3,7 @@
 // const inquirer = require('inquirer');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// return empty string if unlicensed, badge
 function renderLicenseBadge(license) {
   let badge ='';
   if(license != 'Unlicensed'){
@@ -13,26 +13,26 @@ function renderLicenseBadge(license) {
 }
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// return link if license is chosen, empty string if unlicensed
 function renderLicenseLink(license) {
   let licenseLink;
-switch(license){
-  case 'MIT': licenseLink = 'https://mit-license.org/';
-  break;
-  case 'Apache': licenseLink ='https://www.apache.org/licenses/LICENSE-2.0.html';
-  break;
-  case 'BSD': licenseLink = 'https://opensource.org/licenses/BSD-3Clause';
-  break;
-  case 'Unlicensed': licenseLink = '';
-  break;
-  default: licenseLink = '';
-  break;
+  switch(license){
+    case 'MIT': licenseLink = 'https://mit-license.org/';
+    break;
+    case 'Apache': licenseLink ='https://www.apache.org/licenses/LICENSE-2.0.html';
+    break;
+    case 'BSD': licenseLink = 'https://opensource.org/licenses/BSD-3Clause';
+    break;
+    case 'Unlicensed': licenseLink = '';
+    break;
+    default: licenseLink = '';
+    break;
 }
 return licenseLink;
 }
 
 // TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// adds license link into readme as template literal
 function renderLicenseSection(license) { 
   let LicenseSection ='';
 
@@ -43,6 +43,7 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
+// structures readme using template literals
 function generateMarkdown(data) {
   return `# ${data.title}\n
   

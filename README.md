@@ -9,5 +9,5 @@ This activity is to create a high-quality README for its users. This includes pr
 ![Terminal Screenshot](./assets/terminal.png)
 ![Readme Screenshot](./assets/readmepic.png)
 
-https://watch.screencastify.com/v/m9AI9DuKtYdrFl8qShPJ 
+https://drive.google.com/file/d/1ijIcmOeoNAxz_G2PcAEkb60AhiX1sszv/view  
 https://github.com/mayphamx/Professional-ReadMe-Generator
